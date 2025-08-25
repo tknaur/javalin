@@ -45,7 +45,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>net.knaur.java.javalin_vt.App</mainClass>
+                            <mainClass>net.knaur.javalin.javalin_vt.App</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
