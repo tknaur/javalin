@@ -2,6 +2,8 @@ package net.knaur.javalin;
 
 import io.javalin.Javalin;
 
+import java.util.Map;
+
 import static io.javalin.apibuilder.ApiBuilder.*;
 
 public class Main {
@@ -14,7 +16,7 @@ public class Main {
         return Javalin.create(cfg -> {
             cfg.useVirtualThreads = true;
             cfg.router.apiBuilder(() -> {
-                get("/hello", ctx -> ctx.result("Hello World"));
+                get("/hello", ctx -> ctx.json(Map.of("message", "Hello World")));
             });
         });
     }
